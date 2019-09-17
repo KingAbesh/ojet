@@ -17,7 +17,7 @@ function(oj, ko, $, Bootstrap, responsiveUtils, responsiveKnockoutUtils) {
      self.labelEdge = ko.computed(function() {
                                    return self.isSmall() ? "top" : "start";
                                  }, self);
-     self.clickedButton = ko.observable("(None clicked yet)");
+     self.clickedButton = ko.observable("(k)");
      self.buttonClick = function(event){
                            self.clickedButton(event.currentTarget.id);
                            return true;

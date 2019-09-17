@@ -20,12 +20,12 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojresponsiveutils', 'ojs/
        // Router setup
        self.router = Router.rootInstance;
        self.router.configure({
-         'login': {label: 'Login'},
+         'login': {label: 'Login' , isDefault: true},
          'registration': {label: 'Registration'},
-         'dashboard': {label: 'Dashboard', isDefault: true},
+         'home': {label: 'Home'},
          'incidents': {label: 'Incidents'},
          'customers': {label: 'Customers'},
-         'about': {label: 'About'}
+         'profile': {label: 'Profile'}
        });
       Router.defaults['urlAdapter'] = new Router.urlParamAdapter();
 
@@ -50,13 +50,13 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojresponsiveutils', 'ojs/
 
       // Navigation setup
       var navData = [
-      {name: 'Dashboard', id: 'dashboard',
+      {name: 'Home', id: 'home',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
       {name: 'Incidents', id: 'incidents',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
       {name: 'Customers', id: 'customers',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
-      {name: 'About', id: 'about',
+      {name: 'Profile', id: 'profile',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
       ];
       self.navDataProvider = new ArrayDataProvider(navData, {keyAttributes: 'id'});
@@ -65,7 +65,8 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojresponsiveutils', 'ojs/
       // Application Name used in Branding Area
       self.appName = ko.observable("Team 2 Ojet");
       // User Info used in Global Navigation area
-      self.userLogin = ko.observable("john.hancock@oracle.com");
+      self.userLogin = ko.observable("Not yet Logged in");
+       self.userLoggedIn = ko.observable("N");
 
       // Footer
       function footerLink(name, id, linkTarget) {
