@@ -20,6 +20,8 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojresponsiveutils', 'ojs/
        // Router setup
        self.router = Router.rootInstance;
        self.router.configure({
+         'login': {label: 'Login'},
+         'registration': {label: 'Registration'},
          'dashboard': {label: 'Dashboard', isDefault: true},
          'incidents': {label: 'Incidents'},
          'customers': {label: 'Customers'},
@@ -61,7 +63,7 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojresponsiveutils', 'ojs/
 
       // Header
       // Application Name used in Branding Area
-      self.appName = ko.observable("App Name");
+      self.appName = ko.observable("Team 2 Ojet");
       // User Info used in Global Navigation area
       self.userLogin = ko.observable("john.hancock@oracle.com");
 

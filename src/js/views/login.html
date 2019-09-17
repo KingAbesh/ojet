@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2019, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding logincss">
+<div>
+  <oj-form-layout id="form-container">
+    <!-- <oj-input-text id="input" required value="text" label-hint="Name"></oj-input-text> -->
+    <oj-label id="inputgroup" label-id="inputgrouplabel">Name *</oj-label>
+    <div class="oj-form-control-group" aria-labelledby="inputgrouplabel" role="group">
+      <oj-input-text style="max-width:49.7%" aria-label="this is the input1 label text" placeholder="First Name"></oj-input-text>
+      <oj-input-text style="max-width:49.7%" aria-label="this is the input2 label text" placeholder="Last Name"></oj-input-text>
+    </div>
+    <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Username"></oj-input-text>
+    <oj-input-text id="input2" style="max-width:100%" type="email" label-hint="Email"></oj-input-text>
+    <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Phone"></oj-input-text>
+    <oj-input-password id="password" style="max-width:100%" value="{{value}}" label-hint="Password"></oj-input-password>
+    <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Location"></oj-input-text>
+    <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Stack" placeholder="E.g. MongoDB, ExpressJS, ReactJS and NodeJS"></oj-input-text>
+    <oj-button id='button1' on-oj-action='[[buttonClick]]'>Sign-up</oj-button>
+  </oj-form-layout>
+</div>
+
+</div>
