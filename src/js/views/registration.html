@@ -16,7 +16,9 @@
     <oj-input-password id="password" style="max-width:100%"  label-hint="Comfirm Password"></oj-input-password>
     <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Location"></oj-input-text>
     <oj-input-text id="input2" style="max-width:100%" type="text" label-hint="Stack" placeholder="MERN, LAMP, PERN"></oj-input-text>
-    <oj-button id='button1' on-oj-action='[[buttonClick]]'>Register</oj-button>
+         <input id="create" type="reset" 
+           data-bind="click: buttonClick, 
+                      ojComponent: {component: 'ojButton', label: 'Create User'}"/>
   </oj-form-layout>
 </form>
 </div>

@@ -11,6 +11,11 @@ define([],
 
     function ProfileViewModel() {
       var self = this;
+      self.menuItemAction = function (event) {
+       var selectedMenuOption = event.path[0].id
+       console.log(selectedMenuOption);
+       if (selectedMenuOption == "sign") {
+          ....}
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 

@@ -1,3 +1,4 @@
+
 <!--
  Copyright (c) 2014, 2019, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
@@ -38,4 +39,26 @@
       We will conditionally render this page. Look into knockout JS at depth
     </p>
   </div>
+</div>
+
+<div align="center">
+<label for="username">Username</label>
+<input id="username" type="text" required 
+       data-bind="ojComponent: {component: 'ojInputText',
+                                validators: [{type: 'regExp', options: {pattern: '[a-zA-Z0-9]{3,}',
+                                messageDetail: 'You must enter at least 3 letters or numbers'}}],
+                            invalidComponentTracker: tracker}" /><br /><br />
+<label for="password">Password</label>
+<input id="password" type="password" required
+       data-bind="ojComponent: {component: 'ojInputPassword',
+                                validators: [{type: 'regExp', options : {pattern: '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,}',
+                                messageSummary : '{label} too Weak',
+                                messageDetail: 'The password must contain atleast one uppercase, one lowercase, one number and must be 6 digits long'}}],
+                                invalidComponentTracker: tracker}" /><br /><br />
+<a class="oj-button-primary oj-button-xl" 
+   id="create" type="button" 
+   data-bind="ojComponent: {component: 'ojButton', 
+                            label: 'Login',
+                            disabled: shouldDisableCreate()},
+        click: onClick"></a>
 </div>

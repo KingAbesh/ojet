@@ -2,7 +2,7 @@
 This our ojet project
 
 
-#How to Install
+# How to Install
 1. Have NodeJs installed
 
 2. Install Oracle JET globally:   npm install -g @oracle/ojet-cli
