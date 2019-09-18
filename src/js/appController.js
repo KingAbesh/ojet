@@ -79,8 +79,12 @@ define([
         iconClass:
           "oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24"
       },
-      // {name: 'Customers', id: 'customers',
-      //  iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
+      {
+        name: "Registration",
+        id: "registration",
+        iconClass:
+          "oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24"
+      },
       {
         name: "Profile",
         id: "profile",
@@ -96,7 +100,7 @@ define([
     // Application Name used in Branding Area
     self.appName = ko.observable("Team 2 Ojet");
     // User Info used in Global Navigation area
-    self.userLogin = ko.observable("abeshekwere@gmail.com");
+    self.userLogin = ko.observable("Not Yet Logged In");
     self.userLoggedIn = ko.observable("N");
 
     // Footer

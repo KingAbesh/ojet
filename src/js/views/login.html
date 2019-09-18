@@ -2,13 +2,14 @@
  Copyright (c) 2014, 2019, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
  -->
- <div class="oj-hybrid-padding logincss">
+<div class="oj-hybrid-padding logincss">
   <div>
-    <oj-form-layout id="form-container">
+    <oj-form-layout id="form-container" data-bind="submit: buttonClick1">
       <!-- <oj-input-text id="input" required value="text" label-hint="Name"></oj-input-text> -->
 
       <oj-input-text
-        id="input2"
+        id="username"
+        data-bind="textInput: userName"
         style="max-width:100%"
         type="text"
         label-hint="Username"
@@ -16,20 +17,25 @@
 
       <oj-input-password
         id="password"
+        data-bind="textInput: userPassword"
         style="max-width:100%"
         label-hint="Password"
       ></oj-input-password>
 
-      <oj-button id="button1" on-oj-action="([[buttonClick]])">Login</oj-button>
+      <oj-button id="button1" data-bind="click: buttonClick1">Login</oj-button>
 
-      <P
-        >Not yet Registered? Click
-        <oj-button id="button1" on-oj-action="([[buttonClick]])"
+      <p>
+        Not yet Registered? Click
+        <oj-button id="button2" data-bind="click: buttonClick1"
           >Register</oj-button
-        ></P
-      >
+        >
+      </p>
     </oj-form-layout>
-
-    <p>We wil conditionally render this page. Look into knockout JS at depth</p>
+    <div style="font-weight:bold; color:#ea5b3f;">
+      <p data-bind="text: message"></p>
+    </div>
+    <p>
+      We will conditionally render this page. Look into knockout JS at depth
+    </p>
   </div>
 </div>
