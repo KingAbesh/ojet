@@ -71,7 +71,7 @@ define([
         name: "Home",
         id: "home",
         iconClass:
-          "oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"
+          "oj-clickable-icon demo-icon-font demo-home-icon-24"
       },
       {
         name: "Login",
